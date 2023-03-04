@@ -432,7 +432,7 @@ body {
 }
 
 .info-title-top {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 600;
     margin: 35px 0;
     text-decoration: overline 5px;
@@ -605,9 +605,9 @@ body {
 }
 
 .info-sns-quick-youtube,
-.info-sns-quick-blog,
+.info-sns-quick-insta,
 .info-sns-quick-facebook {
-    font-size: 30px;
+    font-size: 28px;
     margin: 0 6px;
     cursor: pointer;
 }
@@ -705,8 +705,232 @@ body {
 .service {
     position: relative;
     display: block;
+    width: 100%;
+    height: 100%;
     background: darkgray;
 }
+
+.service .inner {
+    background: darkred;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* 서비스 탑 */
+.service-top {
+    width: 100%;
+    height: 520px;
+    background: #647694;
+    display: flex;
+    gap: 1.3542vw;
+    justify-content: center;
+}
+
+
+
+
+.service-news,
+.service-notice {
+    width: 21.8750vw;
+    min-width: 350px;
+    height: 520px;
+
+    background: darkcyan;
+}
+
+.service-title {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    font-size: 1.75rem;
+    font-weight: 600;
+    background: darkgreen;
+    padding-left: 2.6042vw;
+}
+
+.service-title-line {
+    width: 150px;
+    height: 1px;
+    background: #282828;
+    margin: 0 17px;
+}
+
+.service-title a {
+    font-size: 1.56rem;
+}
+
+.service-title span {
+    text-decoration: overline 5px;
+}
+
+.service-content {
+    width: 21.8750vw;
+    min-width: 310px;
+    height: 165px;
+    background: darkkhaki;
+    margin: 0 auto;
+}
+
+.service-content h5 {
+    width: 320px;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.35;
+    margin-bottom: 15px;
+}
+
+.service-content p {
+    width: 320px;
+    height: 100px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+
+.service-line {
+    width: 320px;
+    height: 1px;
+    background: #727272;
+    margin: 29.5px auto;
+}
+
+
+
+.service-menu {
+    width: 19.7917vw;
+    min-width: 270px;
+    height: 520px;
+    background: darkviolet;
+}
+
+.service-content-2 {
+    width: 19.7917vw;
+    min-width: 270px;
+    height: 390px;
+    background: darkseagreen;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    align-content: space-evenly;
+}
+
+.service-content-menu {
+    width: 7.2917vw;
+    min-width: 125px;
+    height: 35px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+/* 서비스 탑 반응형 */
+@media screen and (max-width : 1024px) {
+    .service .inner {
+        align-items: center;
+    }
+
+    .service-top {
+        width: 84.5703vw;
+        min-width: 715px;
+        height: 860px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        gap: 1.9531vw;
+
+    }
+
+    .service-menu {
+        width: 84.5703vw;
+        min-width: 715px;
+        height: 318px;
+        grid-area: 2/1/4/-1;
+    }
+
+    .service-menu .service-title {
+        width: 100%;
+    }
+
+    .service-content-2 {
+        width: 635px;
+        /*min-width: 270px;*/
+        height: 188px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 0 auto;
+    }
+
+
+
+    .service-news,
+    .service-notice {
+        width: 41.0156vw;
+        min-width: 350px;
+        height: 520px;
+    }
+
+    .service-content {
+        width: 41.0156vw;
+        min-width: 310px;
+        height: 165px;
+        background: darkkhaki;
+        margin: 0 auto;
+    }
+
+    .service-title {
+        width: 100%;
+        height: 130px;
+        display: flex;
+        align-items: center;
+        font-size: 1.75rem;
+        font-weight: 600;
+        background: darkgreen;
+        padding-left: 4.8828vw;
+    }
+
+}
+
+
+
+
+
+
+
+
+/* 서비스 미들 */
+.service-middle {
+    width: 100%;
+    height: 250px;
+    background: #101e34;
+
+}
+
+
+
+
+
+
+
+
+/* 서비스 바텀 */
+.service-bottom {
+    width: 100%;
+    height: 100px;
+    background: darkslateblue;
+}
+
+
+
+
+
+
+
 
 /* 하단 */
 .footer {
