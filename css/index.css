@@ -1,0 +1,716 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 100;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 300;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 900;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #282828;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Noto Sans KR';
+    color: #282828;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0;
+    word-break: keep-all;
+    height: 100%;
+}
+
+
+/* 공통요소 */
+.inner {
+    position: relative;
+    display: block;
+    max-width: 1270px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* 레이아웃 */
+.wrap {
+    position: relative;
+    display: block;
+    height: 100%;
+}
+
+
+/* 상단 */
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100px;
+    z-index: 9999;
+    transition: height 0.5s, background 0.5s;
+}
+
+.mb-nav-list,
+.mb-nav {
+    display: none;
+}
+
+.header .inner {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 100%;
+    height: 100%;
+}
+
+.logo {
+    display: block;
+    width: 200px;
+    height: 100px;
+    background: url(../img/logoWhite.png) no-repeat center;
+    background-size: auto;
+    margin: 0 50px;
+    /* position: absolute;
+    left: 100px; */
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    min-width: 500px;
+
+}
+
+.gnb {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    font-size: 1.25rem;
+    font-weight: 500;
+    overflow: hidden;
+    transition: height 0.2s, background 0.5s;
+
+}
+
+.gnb:hover {
+    height: 410px;
+    background-color: #101e34;
+}
+
+.english {
+    width: 10.4167vw;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 50px;
+    /* position: absolute;
+    right: 100px; */
+    transition: all 0.3s;
+}
+
+.gnb li {
+    width: 7.0313vw;
+    min-width: 80px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.gnb li a,
+.english {
+    color: #fff;
+}
+
+.sub-menu {}
+
+.sub-menu li {
+    margin: 35px 0;
+}
+
+.sub-menu li a {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+/* 서브메뉴 숨기기 */
+.gnb li ul {
+    /* display: none; */
+    margin-top: 40px;
+}
+
+/* 서브메뉴 보이게하기 */
+.gnb li:hover ul {
+    display: block;
+}
+
+/* 상단 메뉴 반응형 */
+@media screen and (max-width:1024px) {
+    .nav {
+        display: none;
+    }
+
+    .mb-nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+    }
+
+    .mb-bt {
+        width: 100px;
+        height: 95px;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: space-between;
+        padding: 30px 30px;
+        cursor: pointer;
+        z-index: 9999;
+
+    }
+
+    .mb-bt span {
+        display: block;
+        width: 40px;
+        height: 5px;
+        background: #fff;
+        border-radius: 2px;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .mb-bt span:nth-child(odd) {
+        width: 27px;
+    }
+
+    .logo {
+        margin: 0 10px;
+
+        z-index: 9999;
+    }
+
+    .english {
+        margin: 0;
+        position: absolute;
+        right: 130px;
+    }
+
+    .mb-nav-gnb {
+        width: 100%;
+        height: 100vh;
+        padding: 140px 100px;
+
+    }
+
+    .mb-nav-gnb li {
+        display: block;
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .mb-nav-gnb li a {
+        color: #fff;
+        font-size: 1.5rem;
+    }
+
+    /* mb-bt 눌렀을때 변화 .active */
+    .mb-nav-list {
+        display: block;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #101e34;
+        transition: left 0.3s ease-in-out;
+    }
+
+    .mb-nav-list.active {
+        left: 0;
+    }
+
+    .mb-bt.active span:nth-child(odd) {
+        display: none;
+
+    }
+
+    .mb-bt.active span:nth-child(2) {
+        transform: rotate(45deg);
+        position: absolute;
+        top: calc(50% - 2px);
+    }
+
+    .mb-bt.active span:nth-child(4) {
+        transform: rotate(-45deg);
+        position: absolute;
+        bottom: calc(50% - 2px);
+    }
+}
+
+@media screen and (max-width:768px) {
+    .english {
+        right: 100px;
+    }
+}
+
+
+
+/* 비주얼 */
+.visual {
+    position: relative;
+    display: block;
+    background: url(../img/bg.jpg) no-repeat right bottom;
+    background-color: #647694;
+    background-size: auto;
+    background-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+
+}
+
+.visual .inner {
+    max-width: 1920px;
+    height: 100%;
+}
+
+.visual-bg-basic {
+    background: url(../img/bg.jpg) no-repeat right bottom;
+    background-size: auto;
+    width: 75%;
+    height: 88.5%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 150px 0 0 0;
+}
+
+.visual-bg-txt {
+    font-size: 2.4rem;
+    line-height: 1.25;
+    color: #fff;
+    position: absolute;
+    top: 60%;
+    left: -13%;
+    transition: all 0.2s;
+}
+
+.visual-bg-txt h2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -110px;
+    width: 250px;
+    height: 10px;
+    background: #fff;
+    transition: 0.3s;
+}
+
+
+/* 비주얼 반응형 */
+
+@media screen and (max-width:768px) {
+    .visual-bg-txt h2 {
+        margin-right: 0;
+    }
+
+    .visual-bg-txt {
+        font-size: 2rem;
+        line-height: 1.25;
+    }
+
+    .visual-bg-txt h2::after {
+        width: 32.5521vw;
+        top: -14.3229vw;
+    }
+
+
+}
+
+@media screen and (max-width:620px) {
+    .visual-bg-txt {
+        font-size: 1.75rem;
+    }
+}
+
+@media screen and (max-width:560px) {
+    .visual-bg-txt {
+        font-size: 1.55rem;
+    }
+}
+
+
+
+/* 정보 */
+.info {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: darkgoldenrod;
+}
+
+
+
+.info-top {
+    width: 100%;
+    height: 400px;
+    background: darkgrey;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.info-title-1 {
+    width: 230px;
+    height: 170px;
+    background-color: darkgreen;
+}
+
+.info-title-top {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 35px 0;
+    text-decoration: overline 5px;
+}
+
+.info-title-bottom {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.info-content-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    width: 1020px;
+    height: 170px;
+    background: darkkhaki;
+}
+
+.info-content-box {
+    width: 100px;
+    height: 130px;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+.info-content-icon {
+    width: 100px;
+    height: 80px;
+}
+
+.sea1 {
+    background: url(../img/seaIcon01.png) no-repeat center;
+}
+
+.sea2 {
+    background: url(../img/seaIcon02.png) no-repeat center;
+}
+
+.sea3 {
+    background: url(../img/seaIcon03.png) no-repeat center;
+}
+
+.sea4 {
+    background: url(../img/seaIcon04.png) no-repeat center;
+}
+
+.sea5 {
+    background: url(../img/seaIcon05.png) no-repeat center;
+}
+
+.sea6 {
+    background: url(../img/seaIcon06.png) no-repeat center;
+}
+
+.info-content-txt {
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* 해양정보 반응형 */
+@media screen and (max-width:1024px) {
+    .info-top {
+        height: 450px;
+        justify-content: center;
+    }
+
+    .info-title-1 {
+        width: 230px;
+        height: 260px;
+    }
+
+    .info-content-1 {
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 49.8047vw;
+        min-width: 480px;
+        height: 260px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .info-content-1 {
+        grid-template-columns: 1fr 1fr;
+        width: 39.0625vw;
+        min-width: 200px;
+    }
+
+    .info-top {
+        height: 500px;
+        align-items: start;
+        justify-content: flex-start;
+        gap: 15px;
+        padding-top: 60px;
+    }
+}
+
+
+
+
+
+
+.info-bottom {
+    width: 100%;
+    height: 450px;
+    background: darkorchid;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.info-title-2 {
+    width: 230px;
+    padding-left: 20px;
+}
+
+.info-sns-box {
+    width: 230px;
+    height: 230px;
+    background: #101e34;
+    padding: 10px 0;
+    margin-right: 20px;
+}
+
+.info-sns-seaStory,
+.info-sns,
+.info-sns-quick {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    border: 1px solid #fff;
+    margin: 15px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    position: relative;
+}
+
+.info-sns-seaStory {
+    background: #fff;
+    color: #282828;
+}
+
+.info-sns-seaStory span::after {
+    border-left: 10px solid #fff;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    content: "";
+    height: 0;
+    right: -10px;
+    display: block;
+    position: absolute;
+    top: 14px;
+    width: 0;
+}
+
+.info-sns-quick {
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+}
+
+.info-sns-quick span {
+    margin: 0 13px;
+}
+
+.info-sns-quick-youtube,
+.info-sns-quick-blog,
+.info-sns-quick-facebook {
+    font-size: 30px;
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+
+.info-content-2 {
+    width: 1100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+/* 스와이퍼 슬라이드 - 정보 */
+.swiper {
+    width: 850px;
+    height: 100%;
+}
+
+.swiper-slide {
+    width: 270px !important;
+    height: 230px !important;
+    background: #000;
+    text-align: center;
+    font-size: 18px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff !important;
+}
+
+@media screen and (max-width:1140px) {
+    .swiper {
+        width: 560px;
+
+    }
+
+
+    .info-content-2 {
+        width: 810px;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .swiper {
+        width: 270px;
+    }
+
+    .info-content-2 {
+        width: 67.7083vw;
+        min-width: 400px;
+    }
+
+    .info-sns-seaStory,
+    .info-sns,
+    .info-sns-quick {
+        width: 23.4375vw;
+        min-width: 100px;
+        font-size: 1.1rem;
+    }
+
+    .info-sns-quick span {
+        display: none;
+    }
+
+    .info-sns-box {
+        margin-right: 1.3021vw;
+    }
+
+}
+
+@media screen and (max-width:850px) {
+    .info-sns-box {
+        /* width: 29.9479vw;
+    min-width: 170px;
+    margin-right: 2.6042vw; */
+    }
+
+}
+
+/* 서비스 */
+.service {
+    position: relative;
+    display: block;
+    background: darkgray;
+}
+
+/* 하단 */
+.footer {
+    position: relative;
+    display: block;
+    background: darkgreen;
+}
