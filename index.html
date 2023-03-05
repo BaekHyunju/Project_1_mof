@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -19,7 +19,9 @@
             <div class="inner">
                 <nav class="nav">
                     <ul class="gnb">
-                        <a href="index.html" class="logo"></a>
+                        <li>
+                            <a href="index.html" class="logo"></a>
+                        </li>
                         <li>
                             <a href="#"><span>정보공개</span></a>
                             <ul class="sub-menu">
@@ -66,7 +68,9 @@
                                 <li><a href="#"><span>찾아오시는길</span></a></li>
                             </ul>
                         </li>
-                        <a href="#" class="english"><span>ENGLISH</span></a>
+                        <li>
+                            <a href="#" class="english"><span>ENGLISH</span></a>
+                        </li>
                     </ul>
                 </nav>
                 <nav class="mb-nav">
@@ -399,7 +403,7 @@
         var swiper = new Swiper(".service-middle .mySwiper", {
             autoplay: {
                 delay: 1000,
-                disableOnInteraction : false,
+                disableOnInteraction: false,
             },
             ovserver: true,
             observeParents: true,
