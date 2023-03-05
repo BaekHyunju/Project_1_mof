@@ -288,17 +288,35 @@
                 <div class="service-middle">
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">Slide 1</div>
-                            <div class="swiper-slide">Slide 2</div>
-                            <div class="swiper-slide">Slide 3</div>
-                            <div class="swiper-slide">Slide 4</div>
-                            <div class="swiper-slide">Slide 5</div>
-                            <div class="swiper-slide">Slide 6</div>
-                            <div class="swiper-slide">Slide 7</div>
-                            <div class="swiper-slide">Slide 8</div>
-                            <div class="swiper-slide">Slide 9</div>
+                            <div class="swiper-slide">
+                                <img src="img/news1.jpg" alt="뉴스-해양관할구역설정법 입법 공청회 참석">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/news2.jpg" alt="뉴스-공익재단 바다의 품 창립행사 참석">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/news3.jpg" alt="뉴스-수산식품 수출 대책회의 주재">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/news4.jpg" alt="뉴스-남해안권 해양레저관광 활성화를 위한 업무협약 체결">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/news5.jpg" alt="뉴스-전기추진 차도선 사업현장 방문">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/news6.jpg" alt="뉴스-전남 신안군 어선 전복사고 수색현장 점검">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/news7.jpg" alt="뉴스-전남 신안군 어선 전복사고 수습 현장 지원">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/news8.jpg" alt="뉴스-여수,광양지역 정책현장 방문">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/news9.jpg" alt="뉴스-통영지역 정책현장 방문">
+                            </div>
                         </div>
-                        <div class="swiper-pagination"></div>
+
                     </div>
                 </div>
             </div>
@@ -316,24 +334,28 @@
         <!-- 하단 -->
         <footer class="footer">
             <div class="inner">
-                <div class="footer-top"></div>
+                <div class="footer-top">
+                    <div class="footer-logo"></div>
+                </div>
                 <div class="footer-middle">
                     <div class="footer-middle-txt">
                         <p>찾아오시는 길</p>
                     </div>
-                    <div class="footer-middle-txt"><span>찾아오시는 길</span></div>
                     <div class="footer-middle-txt">
-                        <p>찾아오시는 길</p>
+                        <span>개인정보 처리방침</span>
                     </div>
                     <div class="footer-middle-txt">
-                        <p>찾아오시는 길</p>
+                        <p>저작권 정책</p>
+                    </div>
+                    <div class="footer-middle-txt">
+                        <p>이메일 무단수집거부</p>
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <div class="footer-bottom-txt">우)30110 세종특별자치시 다솜2로 94(어진동) 정부세종청사 5동 해양수산부 정부통합콜센터 - 국번없이 110 /
-                        당직실: 044-200-5990 </div>
-                    <div class="footer-bottom-txt">Copyright © Ministry of Oceans and Fisheries. All rights reserved.
-                    </div>
+                    <span class="footer-bottom-txt">우)30110 세종특별자치시 다솜2로 94(어진동) 정부세종청사 5동 해양수산부 정부통합콜센터 - 국번없이 110 /
+                        당직실: 044-200-5990 </span> <br>
+                    <span class="footer-bottom-txt">Copyright © Ministry of Oceans and Fisheries. All rights reserved.
+                    </span>
                 </div>
             </div>
         </footer>
@@ -375,10 +397,12 @@
 
     <script>
         var swiper = new Swiper(".service-middle .mySwiper", {
-            freeMode: false,
             autoplay: {
-                delay: 2000
+                delay: 1000,
+                disableOnInteraction : false,
             },
+            ovserver: true,
+            observeParents: true,
             loop: true,
             loopAdditionalSlides: 1,
             breakpoints: {
@@ -396,7 +420,7 @@
                 1300: {
                     slidesPerView: 4,
                     spaceBetween: 10
-                },
+                }
             }
         });
     </script>
