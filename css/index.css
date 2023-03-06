@@ -437,6 +437,10 @@ body {
     text-decoration: overline 5px;
 }
 
+.info-title-top span {
+    color: #2A6378;
+}
+
 .info-title-bottom {
     font-size: 20px;
     font-weight: 400;
@@ -448,7 +452,8 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
-    width: 700px;
+    width: 41.6667vw;
+    min-width: 700px;
     /* 1020 */
     margin-left: 6.2500vw;
     /* 120 */
@@ -459,8 +464,9 @@ body {
 .info-content-box {
     width: 100px;
     height: 130px;
-    border: 1px solid #dcdcdc;
+    /* border: 1px solid #dcdcdc; */
     cursor: pointer;
+    transition: all .5s ease-in-out;
 }
 
 .info-content-icon {
@@ -469,34 +475,69 @@ body {
 }
 
 .sea1 {
-    background: url(../img/seaIcon01.png) no-repeat center;
+    background: url(../img/seaIcon01-gray.png) no-repeat center;
 }
 
 .sea2 {
-    background: url(../img/seaIcon02.png) no-repeat center;
+    background: url(../img/seaIcon02-gray.png) no-repeat center;
 }
 
 .sea3 {
-    background: url(../img/seaIcon03.png) no-repeat center;
+    background: url(../img/seaIcon03-gray.png) no-repeat center;
 }
 
 .sea4 {
-    background: url(../img/seaIcon04.png) no-repeat center;
+    background: url(../img/seaIcon04-gray.png) no-repeat center;
 }
 
 .sea5 {
-    background: url(../img/seaIcon05.png) no-repeat center;
+    background: url(../img/seaIcon05-gray.png) no-repeat center;
 }
 
 .sea6 {
-    background: url(../img/seaIcon06.png) no-repeat center;
+    background: url(../img/seaIcon06-gray.png) no-repeat center;
 }
 
 .info-content-txt {
     font-size: 1rem;
     text-align: center;
     line-height: 1.3;
+    color: #424242;
+    transition: 0.3s;
 }
+
+
+/* 해양정보 아이콘 호버 */
+.info-content-box:hover .info-content-txt {
+    color: #2A6378;
+    font-weight: 500;
+
+}
+
+.info-content-box:hover .info-content-icon:before {
+    opacity: 0.9;
+    transform: scale(1.5);
+}
+
+.info-content-icon {
+    position: relative;
+}
+
+.info-content-icon::before {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    content: '';
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #2A6378;
+    opacity: 0;
+    transform: scale(0);
+    z-index: -1;
+    transition: all 0.3s;
+}
+
 
 /* 해양정보 반응형 */
 /* @media screen and (max-width:1180px) {
@@ -785,7 +826,7 @@ body {
     width: 21.8750vw;
     min-width: 350px;
     height: 500px;
-    background: #dcdcdc;
+    background: #e7e7e7;
 }
 
 .service-title {
@@ -808,10 +849,15 @@ body {
 
 .service-title a {
     font-size: 1.56rem;
+    transition: all 0.3s;
+}
+
+.service-title {
+    text-decoration: overline 5px;
 }
 
 .service-title span {
-    text-decoration: overline 5px;
+    color: #2A6378;
 }
 
 .service-content {
@@ -819,6 +865,7 @@ body {
     min-width: 310px;
     height: 165px;
     margin: 0 auto;
+
 }
 
 .service-content h5 {
@@ -829,6 +876,7 @@ body {
     font-size: 18px;
     line-height: 1.1;
     margin-bottom: 15px;
+    cursor: pointer;
 }
 
 .service-content p {
@@ -838,6 +886,7 @@ body {
     margin: 0 auto;
     font-size: 1rem;
     line-height: 1.2;
+    cursor: pointer;
 }
 
 .service-line {
@@ -852,7 +901,7 @@ body {
     width: 19.7917vw;
     min-width: 270px;
     height: 500px;
-    background: #dcdcdc;
+    background: #e7e7e7;
 }
 
 .service-content-2 {
@@ -867,13 +916,113 @@ body {
 }
 
 .service-content-menu {
-    width: 7.2917vw;
+    /* width: 7.2917vw; */
+    width: 8vw;
     min-width: 125px;
     height: 35px;
     font-size: 1.25rem;
     cursor: pointer;
     text-align: center;
 }
+
+.service-content-menu {
+    width: 7.8125vw;
+    height: 50px;
+    padding: 15px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* 서비스 탑 호버 */
+
+.service-title a:hover {
+    color: #2A6378;
+}
+
+
+
+.service-content-menu {
+    position: relative;
+}
+
+.service-content-menu:before,
+.service-content-menu:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: #2A6378;
+    transition: all 0.3s ease;
+}
+
+.service-content-menu:before {
+    height: 0%;
+    width: 2px;
+}
+
+.service-content-menu:after {
+    width: 0%;
+    height: 2px;
+}
+
+.service-content-menu:hover {
+    background: transparent;
+    box-shadow: none;
+}
+
+.service-content-menu:hover:before {
+    height: 100%;
+}
+
+.service-content-menu:hover:after {
+    width: 100%;
+}
+
+.service-content-menu span:hover {
+    color: #2A6378;
+}
+
+.service-content-menu span:before,
+.service-content-menu span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: #2A6378;
+    transition: all 0.3s ease;
+}
+
+.service-content-menu span:before {
+    width: 2px;
+    height: 0%;
+}
+
+.service-content-menu span:after {
+    width: 0%;
+    height: 2px;
+}
+
+.service-content-menu span:hover:before {
+    height: 100%;
+}
+
+.service-content-menu span:hover:after {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 서비스 탑 반응형 */
 @media screen and (max-width : 1024px) {
@@ -1076,7 +1225,7 @@ body {
     margin: 0 auto;
 }
 
-/* 서비스 스와이퍼 슬아이드 */
+/* 서비스 스와이퍼 슬라이드 */
 
 .service-middle .swiper {
     width: 100%;
@@ -1099,6 +1248,20 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.sc-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1.25;
+    background: #3d3d3dc2;
+    opacity: 0;
 }
 
 @media screen and (max-width:1300px) {

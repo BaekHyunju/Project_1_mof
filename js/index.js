@@ -53,7 +53,4 @@ function onYouTubeIframeAPIReady() {
         });
         players.push(player);
     }
-
-
-
 }
