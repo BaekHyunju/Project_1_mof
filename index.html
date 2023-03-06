@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <!--파비콘-->
     <link rel="icon" href="img/favicon.png">
+    <!-- AOS 라이브러리 불러오기-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
@@ -25,7 +28,7 @@
                             <a href="index.html" class="logo"></a>
                         </li>
                         <li>
-                            <a href="#"><span>정보공개</span></a>
+                            <a href="#" class="gnb-menu"><span>정보공개</span></a>
                             <ul class="sub-menu">
                                 <li><a href="#"><span>정보공개제도 안내</span></a></li>
                                 <li><a href="#"><span>사전정보공표</span></a></li>
@@ -35,7 +38,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><span>민원·참여</span></a>
+                            <a href="#"><span class="gnb-menu">민원·참여</span></a>
                             <ul class="sub-menu">
                                 <li><a href="#"><span>국민참여</span></a></li>
                                 <li><a href="#"><span>규제개혁</span></a></li>
@@ -44,7 +47,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><span>알림·뉴스</span></a>
+                            <a href="#"><span class="gnb-menu">알림·뉴스</span></a>
                             <ul class="sub-menu">
                                 <li><a href="#"><span>알림</span></a></li>
                                 <li><a href="#"><span>뉴스</span></a></li>
@@ -52,7 +55,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><span>정책자료</span></a>
+                            <a href="#"><span class="gnb-menu">정책자료</span></a>
                             <ul class="sub-menu">
                                 <li><a href="#"><span>국정과제</span></a></li>
                                 <li><a href="#"><span>업무계획</span></a></li>
@@ -61,7 +64,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><span>기관소개</span></a>
+                            <a href="#"><span class="gnb-menu">기관소개</span></a>
                             <ul class="sub-menu">
                                 <li><a href="#"><span>기관현황</span></a></li>
                                 <li><a href="#"><span>조직 및 직원안내</span></a></li>
@@ -71,7 +74,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#" class="english"><span>ENGLISH</span></a>
+                            <a href="#" class="english"><span>English</span></a>
                         </li>
                     </ul>
                 </nav>
@@ -102,7 +105,7 @@
         <section class="visual" id="visual">
             <div class="inner">
                 <div class="visual-bg-basic">
-                    <div class="visual-bg-txt">
+                    <div class="visual-bg-txt" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
                         <h2>바다 위 탄소 중립!<br>
                             국제해운 탈탄소화 추진</h2>
                     </div>
@@ -369,11 +372,6 @@
                                     <div class="sc-content"><span>통영지역 정책현장 방문</span></div>
                                 </div>
                             </div> -->
-
-
-
-
-
                     </div>
                 </div>
             </div>
@@ -481,7 +479,10 @@
         });
     </script>
     <script src="js/index.js"></script>
-
+    <!-- AOS 스크립트 시작 -->
+    <script>
+        AOS.init(); // 자바스크립트로 init()을 해야 동작한다.
+    </script>
 </body>
 
 </html>
