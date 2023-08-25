@@ -351,6 +351,9 @@ body {
     .english {
         right: 100px;
     }
+    .header{
+        height: 90px;
+    }
 }
 
 @media screen and (max-width:499px) {
